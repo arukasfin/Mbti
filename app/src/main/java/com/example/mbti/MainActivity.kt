@@ -46,7 +46,7 @@ fun MainScreen() {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .weight(1f), 
+            .weight(1f),
         contentAlignment = Alignment.Center
     ) {
         MBTI_Image()

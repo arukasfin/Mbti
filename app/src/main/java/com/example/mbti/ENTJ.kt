@@ -6,10 +6,14 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -30,20 +34,29 @@ class ENTJ : ComponentActivity() {
                         Text(text = "Main 이동")
                     }
 
-                    ENTJ_Image()
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .weight(1f),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        ENTJ_Image()
+                    }
 
-                    Text(text = "\nENTJ\n" +
-                            "\n" +
-                            "통솔자\n" +
-                            "성격 유형: ENTJ\n" +
-                            "\n" +
-                            "E 외향형\n" +
-                            "N 직관형\n" +
-                            "T 사고형\n" +
-                            "J 계획형\n" +
-                            "\n" +
-                            "통솔자\n" +
-                            "당신의 시간은 유한하다. 그러니 다른 사람의 삶을 사느라 시간을 낭비하지 말라.\n")
+                    Text(
+                        text = "\nENTJ\n" +
+                                "\n" +
+                                "통솔자\n" +
+                                "성격 유형: ENTJ\n" +
+                                "\n" +
+                                "E 외향형\n" +
+                                "N 직관형\n" +
+                                "T 사고형\n" +
+                                "J 계획형\n" +
+                                "\n" +
+                                "통솔자\n" +
+                                "당신의 시간은 유한하다. 그러니 다른 사람의 삶을 사느라 시간을 낭비하지 말라.\n"
+                    )
 
 
                     Button(onClick = {
@@ -61,6 +74,7 @@ class ENTJ : ComponentActivity() {
         }
     }
 }
+
 @Composable
 fun ENTJ_Image() {
     Image(
