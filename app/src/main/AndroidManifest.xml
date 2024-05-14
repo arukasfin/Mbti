@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Mbti"/>
         <activity android:name=".INTJ"/>
         <activity android:name=".INTP"/>
         <activity android:name=".ENTJ"/>

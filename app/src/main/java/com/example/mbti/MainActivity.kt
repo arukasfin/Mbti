@@ -43,14 +43,25 @@ fun MainScreen() {
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
 
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .weight(1f),
-        contentAlignment = Alignment.Center
-    ) {
-        MBTI_Image()
-    }
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f),
+            contentAlignment = Alignment.Center
+        ) {
+            MBTI_Image()
+        }
+
+        Button(
+            onClick = {
+                val intent = Intent(context, Mbti::class.java)
+                context.startActivity(intent)
+            },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(text = "MBTI")
+        }
+
 
         Button(
             onClick = {
@@ -101,9 +112,9 @@ fun MainScreen() {
         ) {
             Text(text = "Sub 이동")
         }
+
     }
 }
-
 
 
 @Composable
